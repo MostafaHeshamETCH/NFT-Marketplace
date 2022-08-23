@@ -27,16 +27,18 @@ export default function Home() {
       data.map(async (i) => {
         const tokenUri = await contract.tokenURI(i.tokenId);
         const meta = await axios.get(tokenUri);
+        console.log(meta.data);
         let price = ethers.utils.formatUnits(i.price.toString(), "ether");
         let item = {
           price,
           tokenId: i.tokenId.toNumber(),
           seller: i.seller,
           owner: i.owner,
-          image: meta.data.image,
+          image: meta.data.url,
           name: meta.data.name,
           description: meta.data.description,
         };
+
         return item;
       })
     );
