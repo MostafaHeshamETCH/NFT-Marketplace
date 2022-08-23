@@ -41,7 +41,7 @@ export default function MyAssets() {
           tokenId: i.tokenId.toNumber(),
           seller: i.seller,
           owner: i.owner,
-          image: meta.data.image,
+          image: meta.data.url,
           tokenURI,
         };
         return item;
@@ -57,18 +57,19 @@ export default function MyAssets() {
   if (loadingState === "loaded" && !nfts.length)
     return <h1 className="py-10 px-20 text-3xl">No NFTs owned</h1>;
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center container flex flex-wrap justify-between items-center mx-auto">
       <div className="p-4">
+        <h2 className="text-2xl py-2">My NFTs</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
           {nfts.map((nft, i) => (
             <div key={i} className="border shadow rounded-xl overflow-hidden">
-              <img src={nft.image} className="rounded" />
+              <img src={nft.image} className="rounded w-80" />
               <div className="p-4 bg-black">
                 <p className="text-2xl font-bold text-white">
                   Price - {nft.price} Eth
                 </p>
                 <button
-                  className="mt-4 w-full bg-pink-500 text-white font-bold py-2 px-12 rounded"
+                  className="mt-4 w-full bg-violet-800 text-white font-bold py-2 px-12 rounded-lg"
                   onClick={() => listNFT(nft)}
                 >
                   List

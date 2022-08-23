@@ -9,3 +9,5 @@
 5. Web3
 6. Chai - Testing
 7. IPFS - File Storage
+
+Sorry for hideous design, The whole project was completed in less than 3 hours.
