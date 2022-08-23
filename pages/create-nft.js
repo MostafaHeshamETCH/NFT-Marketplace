@@ -3,11 +3,10 @@ import { ethers } from "ethers";
 import { create as ipfsHttpClient } from "ipfs-http-client";
 import { useRouter } from "next/router";
 import Web3Modal from "web3modal";
-import pic from "../public/monkey-g412399084_1280.jpeg";
 
 const client = ipfsHttpClient("https://ipfs.infura.io:5001/api/v0");
 
-import { nftMarketAddress } from "../config";
+// import { nftMarketAddress } from "../config";
 
 import NFTMarketplace from "../hardhat/artifacts/contracts/NFTMarketplace.sol/NFTMarketplace.json";
 

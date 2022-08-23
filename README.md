@@ -9,4 +9,3 @@
 5. Web3
 6. Chai - Testing
 7. IPFS - File Storage
-8. Polygon - Faster & cheaper than Ethereum

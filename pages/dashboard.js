@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Web3Modal from "web3modal";
 
-// import { marketplaceAddress } from "../config";
+// import { nftMarketAddress } from "../config";
 
 import NFTMarketplace from "../hardhat/artifacts/contracts/NFTMarketplace.sol/NFTMarketplace.json";
 
